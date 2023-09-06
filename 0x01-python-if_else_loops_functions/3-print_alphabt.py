@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+#3-print_alphbt.py
+
+"""prints the alphabet"""
 for i in range(97, 123):
     if chr(i) is not 'q' and chr(i) is not 'e':
         print(f"{chr(i)}", end="")
