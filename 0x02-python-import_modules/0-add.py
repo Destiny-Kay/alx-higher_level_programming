@@ -3,8 +3,7 @@
 if __name__ == "__main__":
     """prints the sum of 1 and 2"""
     from add_0 import add
+
     a = 1
     b = 2
-
-    sum = add(a, b)
-    print(f"{a} + {b} = {sum}\n")
+    print(f"{a} + {b} = {add(a,b)}\n")
