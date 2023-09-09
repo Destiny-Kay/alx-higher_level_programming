@@ -6,5 +6,5 @@ def multiple_returns(sentence):
     if sentence == "":
         ret_tuple = (len(sentence), None)
         return ret_tuple
-    ret_tuple = (    len(sentence), sentence[0])
+    ret_tuple = (len(sentence), sentence[0])
     return ret_tuple
