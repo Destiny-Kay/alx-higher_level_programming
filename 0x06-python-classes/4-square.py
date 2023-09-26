@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+'''Module contains square class declaration'''
 class Square:
     '''A square class'''
     def __init__(self, size=0):
@@ -9,7 +11,7 @@ class Square:
     def size(self):
         '''size getter function'''
         return self.__square_size
-    
+
     @size.setter
     def size(self, size):
         '''size setter function'''

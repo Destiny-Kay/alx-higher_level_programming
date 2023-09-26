@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+'''Module contains square class declaration'''
 class Square:
     '''A square class'''
     def __init__(self, size=0):
