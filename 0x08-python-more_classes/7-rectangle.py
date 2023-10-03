@@ -12,15 +12,19 @@ class Rectangle:
     Attr:
         perimeter-finds the perimeter of the rectangle
     '''
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         '''class initializer'''
         self.__height = height
         self.__width = width
+        type(self).number_of_instances += 1
 
     @property
     def width(self):
         '''width getter'''
-        return self.width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -30,7 +34,7 @@ class Rectangle:
 
         if value < 0:
             raise ValueError("width must be >= 0")
-        self.width = value
+        self.__width = value
 
     @property
     def height(self):
@@ -49,10 +53,30 @@ class Rectangle:
 
     def area(self):
         '''returns the area of the rectangle'''
-        return (self.__height * self.__width)
+        return self.__height * self.__width
 
     def perimeter(self):
         '''returns the perimeter of the rectangle'''
-        if self.__height == 0 or self.__width == 0:
+        if self.__height == 0 or self.width == 0:
             return 0
         return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        '''string representation of the rectangle'''
+        if self.__width == 0 or self.height == 0:
+            return ""
+        rect = []
+        for i in range(self.__height):
+            [rect.append(str(self.print_symbol)) for j in range(self.__width)]
+            if i != self.__height - 1:
+                rect.append("\n")
+        return ("".join(rect))
+
+    def __repr__(self):
+        '''A rectangle repr string'''
+        return "Rectangle({}, {})".format(self.__width, self.height)
+
+    def __del__(self):
+        '''prints a message when a rectangle object is deleted'''
+        type(self).number_of_instances -= 1
+        print("Bye rectangle...")
