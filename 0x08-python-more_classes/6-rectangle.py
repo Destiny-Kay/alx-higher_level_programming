@@ -13,6 +13,7 @@ class Rectangle:
         perimeter-finds the perimeter of the rectangle
     '''
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         '''class initializer'''
         self.__height = height
@@ -78,4 +79,3 @@ class Rectangle:
         '''prints a message when a rectangle object is deleted'''
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
-
