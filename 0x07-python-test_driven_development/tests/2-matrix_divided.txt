@@ -1,0 +1,8 @@
+The ```matrix_divided function```
+==================================
+This function divides a matrix otherwise raises specific errors
+
+------------------------------------------------------
+
+    >>> matrix_divided = __import__(2-matrix_divided).matrix_divided
+    >>> 
