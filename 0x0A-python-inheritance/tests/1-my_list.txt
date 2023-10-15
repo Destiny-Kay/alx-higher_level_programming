@@ -15,7 +15,6 @@ case 1: Normal cases
     [2, 1, 5, 4, 3]
     >>> print(my_list)
     [1, 2, 3, 4, 5]
-    >>>
 
 case 2: negative numbers
 
