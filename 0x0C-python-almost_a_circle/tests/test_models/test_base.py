@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''
     unit test cases for the Base class:
-        Testto_json_string
+        Test to_json_string
 '''
 import unittest
 
