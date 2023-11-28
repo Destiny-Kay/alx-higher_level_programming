@@ -6,8 +6,8 @@ class Rectangle:
     '''A rectangle class'''
     def __init__(self, width=0, height=0):
         '''class initializer'''
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -50,15 +50,15 @@ class Rectangle:
         return (self.__width + self.__height) * 2
 
     def __str__(self):
-        '''String representation of the rectangle'''
+        '''string representation of the rectangle'''
         if self.__width == 0 or self.height == 0:
             return ""
-        rectangle_str = ""
-        for i in range(self.height):
-            for j in range(self.__width):
-                rectangle_str += "#"
-            rectangle_str += "\n"
-        return rectangle_str
+        rect = []
+        for i in range(self.__height):
+            [rect.append(str(self.print_symbol)) for j in range(self.__width)]
+            if i != self.__height - 1:
+                rect.append("\n")
+        return ("".join(rect))
 
     def __repr__(self):
         '''string representation of the class'''
