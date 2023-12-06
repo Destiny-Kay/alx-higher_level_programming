@@ -10,10 +10,10 @@ def append_after(filename="", search_string="", new_string=""):
         search-string: search pattern to be looked for
         new_string: the nw string to be appended
     '''
-    text=''
+    text = ''
     with open(filename) as f:
         for line in f:
-            text+=line
+            text += line
             if search_string in line:
                 text += new_string
     with open(filename, 'w') as w:
