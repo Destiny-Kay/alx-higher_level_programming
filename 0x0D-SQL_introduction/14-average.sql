@@ -1,0 +1,2 @@
+-- computing average
+-- calculates the avearage of all records in the second_table
