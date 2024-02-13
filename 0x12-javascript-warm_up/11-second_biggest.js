@@ -1,7 +1,22 @@
 #!/usr/bin/node
-args = parseInt(process.argv)
+const args = process.argv;
 
-for (let i = 0; i < args.length; i++) {
-  let max = args[0];
-  
+let max = 0;
+let secondMax = 0;
+let i = 2;
+let j = 2;
+
+while (args[i]) {
+  if (args[i] > max) {
+    max = args[i];
+  }
+  i++;
 }
+
+while (args[j]) {
+  if (args[j] < max && args[j] > secondMax) {
+    secondMax = args[j];
+  }
+  j++;
+}
+console.log(secondMax);
