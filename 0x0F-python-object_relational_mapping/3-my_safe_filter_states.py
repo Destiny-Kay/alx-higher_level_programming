@@ -7,8 +7,8 @@ import sys
 def query_states():
     '''Queries a database and returns records that match the arguments'''
     args = sys.argv
-    username, password, db_name, state_name_searched = args[1],
-    args[2], args[3], args[4]
+    username, password = args[1], args[2]
+    db_name, state_name_searched = args[3], args[4]
 
     db = MySQLdb.connect(host="localhost", port=3306,
                          user=username, password=password, database=db_name)

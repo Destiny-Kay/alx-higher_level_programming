@@ -7,12 +7,12 @@ from model_state import State, Base
 
 
 if __name__ == "__main__":
-    username, password, db_name, state_name_search = sys.argv[1],
-    sys.argv[2], sys.argv[3], sys.argv[4]
+    username, password = sys.argv[1], sys.argv[2]
+    db_name, state_name_search = sys.argv[3], sys.argv[4]
 
-    engine = create_engine(f'''mysql+mysqldb://{username}:
-                           {password}@localhost/{db_name}''',
-                           pool_pre_ping=True)
+    engine = create_engine(
+        f'''mysql+mysqldb://{username}:{password}@localhost/{db_name}''',
+        pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
 
