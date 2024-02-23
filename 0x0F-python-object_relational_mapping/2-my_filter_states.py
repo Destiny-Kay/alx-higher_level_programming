@@ -12,8 +12,8 @@ def query_states():
 
     db = MySQLdb.connect(host="localhost", port=3306,
                          user=username, password=password, database=db_name)
-    db.query(f"""SELECT *
-             FROM states WHERE name LIKE '{state_name_searched}';""")
+    db.query("""SELECT *
+             FROM states WHERE name LIKE '{}';""".format(state_name_searched))
     r = db.store_result()
     result = r.fetch_row(0)
 

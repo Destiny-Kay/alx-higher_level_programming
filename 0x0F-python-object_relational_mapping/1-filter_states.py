@@ -11,7 +11,7 @@ def query_states_filter():
 
     db = MySQLdb.connect(host="localhost", port=3306,
                          user=username, password=password, database=db_name)
-    db.query("""SELECT * FROM states WHERE name LIKE 'N%';""")
+    db.query("""SELECT * FROM states WHERE BINARY name LIKE 'N%';""")
     r = db.store_result()
     result = r.fetch_row(0)
 

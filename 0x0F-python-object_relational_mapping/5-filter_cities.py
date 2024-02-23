@@ -19,12 +19,13 @@ if __name__ == "__main__":
     cursor.execute(query)
     result = cursor.fetchall()
 
-    num = len(result)
-    i = 0
-    for city in result:
-        city_name = city[0]
-        if (i == num - 1):
-            print(city_name)
-            break
-        print(city_name, end=', ')
-        i += 1
+    if result:
+        num = len(result)
+        i = 0
+        for city in result:
+            city_name = city[0]
+            if (i == num - 1):
+                print(city_name)
+                break
+            print(city_name, end=', ')
+            i += 1
