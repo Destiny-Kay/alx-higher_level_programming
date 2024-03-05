@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#Peaky finder
+'''Peaky finder'''
 
 
 def find_peak(list_of_integers):
