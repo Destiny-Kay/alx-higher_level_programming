@@ -1,3 +1,3 @@
 #!/bin/bash
 # Returns all methos a url accepts
-methods_allowed=$(curl -s -i -X OPTIONS "$1" | grep -i Allow | sed 's/Allow: //i') && echo "$methods_allowed"
+curl -Is "$1" | grep -i "Allow:" | cut -d ":" -f 2 | cut -c 2- | rev | cut -c 2- | rev

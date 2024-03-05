@@ -1,3 +1,3 @@
 #!/bin/bash
 # Sends a POST request and displays response body. sets some params
-response=$(curl -s -X POST -d "email=test@gmail.com&subject=I will always be here for PLD" "$1") && echo "$response"
+curl -s "$1" -X POST -d "email=test@gmail.com&subject=I will always be here for PLD"
